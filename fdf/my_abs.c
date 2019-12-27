@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_2.c                                        :+:      :+:    :+:   */
+/*   my_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bantario <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/28 18:57:54 by bantario          #+#    #+#             */
-/*   Updated: 2019/12/27 14:29:19 by bglinda          ###   ########.fr       */
+/*   Created: 2019/12/22 16:07:07 by bantario          #+#    #+#             */
+/*   Updated: 2019/12/22 16:07:21 by bantario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "fdf.h"
 
-char					*ft_itoa_2(unsigned long long n)
+int		my_abs(int numb)
 {
-	char				*chs;
-	int					size;
-	unsigned long long	y;
-
-	size = 2;
-	y = n;
-	while (y /= 10)
-		size++;
-	if ((chs = (char *)malloc(sizeof(char) * (size))) == NULL)
-		return (NULL);
-	chs[--size] = '\0';
-	while (size--)
-	{
-		chs[size] = n % 10 + '0';
-		n = n / 10;
-	}
-	return (chs);
+	if (numb < 0)
+		return (numb * (-1));
+	if (numb >= 0)
+		return (numb);
+	return (1);
 }
+
