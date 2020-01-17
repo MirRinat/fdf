@@ -9,4 +9,4 @@ make re
 
 ./fdf test/42.fdf ##or choose any map
 
-enfoy!!!
+enjoy!!!
